@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>FlaskA5</title>
+</head>
+
+<body>
+    <h1>First: David</h1>
+    <h1>Last: Sartin</h1>
+    <h1>Favorite Food: <span style="color: yellowgreen;">Pho</span></h1>
+    <h1>Favorite Vacation: <span style="color: yellowgreen;">TPC Snoqualmie Ridge</span></h1>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="/add-data" method="POST">
+        <label>First Name:</label>
+        <input type="text" name="first_name">
+        
+        <label>Last Name:</label>
+        <input type="text" name="last_name">
+        
+        <label>Email:</label>
+        <input type="email" name="email">
+        
+        <label>Favorite Food:</label>
+        <input type="text" name="favorite_food">
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <h1>First name: {{session.fname}}</h1>
+    <h1>Last name: {{session.lname}}</h1>
+    <h1>Email: {{session.eml}}</h1>
+    <h1>Favorite Food: {{session.favfood}}</h1>
+</body>
+
+
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Full Stack FlaskA1</title>
+    </head>
+    
+    <form action="/add-to-db" method="POST">
+        <label>First Name:</label>
+        <input type="text" name="fname"><br>
+        <label>Last Name:</label>
+        <input type="text" name="lname"><br>
+        <label>email:</label>
+        <input type="text" name="email"><br>
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="pwd"><br>
+        <label></label>
+        <input type="submit" name="submit">
+    </form>
+    
+    <body>
+    <h1>First: {{user.fname}}</h1><br>
+    <h1>Last: {{user.lname}}</h1><br>
+    <h1>Username: {{user.username}}</h1><br>
+    <h1>email: {{user.email}}</h1>
+    </body>
+</html>

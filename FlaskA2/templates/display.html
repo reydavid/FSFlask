@@ -1,0 +1,51 @@
+<script>
+
+    function evenOdd(){
+    
+        for (var i=1; i<=10; i++) {
+                document.getElementById("even_odd").innerHTML("odd")<br>
+                document.getElementById("even_odd").innerHTML("even")
+            }
+    }
+        
+    
+</script>
+
+<h1>First name: Abshir</h1>
+<h1>Last name: Mohamed</h1>
+<h1>Email: abshirm@somthingsomthingmsft.com</h1>
+<h1>Favorite Food: Yeah, we know. Sea moss.</h1>
+
+<!--real code-->
+<!-- <h1>First name: {{firstname}}</h1>
+<h1>Last name: {{lastname}}</h1>
+<h1>Email: {{email}}</h1>
+<h1>Favorite Food: {{favorite_food}}</h1> -->
+<br>
+<br>
+<br>
+<br>
+
+
+<!--<h6 id="even_odd">evenOdd</h6>
+<h3>1 odd</h3>
+<h3>2 even</h3>
+<h3>3 odd</h3>
+<h3>4 even</h3>
+<h3>5 odd</h3>
+<h3>6 even</h3>
+<h3>7 odd</h3>
+<h3>8 even</h3>
+<h3>9 odd</h3>
+<h3>10 even</h3>
+
+<h6>i cheated a little :( </h6>
+-->
+
+{% for i in range(1,11) %}
+    {% if i%2==0 %}
+        <h3>{{i}} even</h3>
+        {% else %}
+        <h3>{{i}} odd</h3>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>FS FlaskA4</title>
+   
+   <style>
+        input{
+            display:block;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <h3>Edit User {{user_id}}</h3>
+    <form action="/new" method = "POST">
+        <label>First name:</label>
+        <input type="text" name="first_name">
+
+        <label>Last name:</label>
+        <input type="text" name="last_name">
+
+        <label>email:</label>
+        <input type="email" name="email">
+
+        <input type="submit" value="Update">
+    
+    </form>
+    
+<br>
+
+</body>
+
+</html>

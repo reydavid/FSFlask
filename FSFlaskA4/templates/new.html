@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>New User</title>
+    </head>
+
+    <style>
+      
+
+    </style>
+    <body>
+        <h3>Add a new user</h3>
+            <form action="/new" method = "POST">
+                <label>First name:</label>
+                <input type="text" name="first_name">
+                <br>
+                <label>Last name:</label>
+                <input type="text" name="last_name">
+                <br>
+                <label>email:</label>
+                <input type="email" name="email">
+                <br>
+                <input type="submit" value="Create">
+            
+            </form>
+            
+        <br>
+            
+            </body>
+        <br>
+        <a href="{{url_for('index')}}">Go Back</a>
+
+    </body>
+</html>

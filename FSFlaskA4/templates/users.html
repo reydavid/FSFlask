@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Users FSFA4</title>
+    </head>
+
+    <style>
+          #users {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #users td, #users th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #users tr:nth-child(even){background-color: #f2f2f2;}
+
+        #users tr:hover {background-color: #ddd;}
+
+        #users th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+    <body>
+        <h3>Users</h3>
+        <table id = "users">
+            
+            <thead>
+                <th</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </thead>
+            
+            <tbody>
+                
+                {% for user in allUsers %}
+        
+                <tr>
+                    <td>{{user.first_name}} {{user.last_name}} </td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.date_created}}</td>
+                    <td><a href="{{url_for('removeUser', user_id = user.id)}}"> Show </a></td>
+                    <td><a href="{{url_for('removeUser', user_id = user.id)}}"> Edit </a></td>
+                    <td><a href="{{url_for('removeUser', user_id = user.id)}}"> Delete </a></td>
+        
+                </tr>
+        
+                {% endfor %}
+            
+            </tbody>
+        </table>
+        <br>
+        <br>
+    <a href="{{url_for('addUser')}}">Add a new user</a>
+    </body>
+</html>

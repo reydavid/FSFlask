@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>FS Flask A3</title>
+    <style>
+        input{
+            display:block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>Add a new course</h3>
+    <form action="/addcourse" method = "POST">
+        <label>Name:</label>
+        <input type="text" name="course_name">
+
+        <label>Description:</label>
+        <input type="text" name="course_description">
+
+        <input type="submit" value="Submit">
+    
+    </form>
+
+<br>
+<h3>Courses</h3>
+<table>
+    <thead>
+        <th id="cname">Course Name</th>
+        <th>Description</th>
+        <th>Date Added</th>
+        <th>Actions</th>
+    </thead>
+    
+    <tbody>
+
+        {% for course in allCourses %}
+
+        <tr>
+            <td>{{course.name}}</td>
+            <td>{{course.description}}</td>
+            <td>{{course.date_created}}</td>
+            <td><a href="{{url_for('removeCourse', course_id = course.id)}}"> remove </a></td>
+
+        </tr>
+
+        {% endfor %}
+    
+    </tbody>
+</table>
+
+</body>
+
+</html>
